@@ -4,6 +4,7 @@ body {
     padding: 0;
     margin: 0;
     position: relative;
+    max-width: 100%;
 }
 
 body {
@@ -15,125 +16,104 @@ body {
     background-attachment: fixed;
 }
 
+
 /*The Nav*/
 
 .navbar-toggler {
     width: 100%;
     height: 100px;
-    background-color: #fffaf1;
+    background-color: #a8a8a8;
+    padding:0;
+    margin:0;
 }
 
 .menuItem{
     font-size: 28px;
-    border-bottom: 2px solid #2D507A;
-    color: #2D507A;
+    color: rgb(255, 255, 255);
     font-family: sans-serif;
     text-align: center;
-    text-shadow: 1px 1px 5px #000000;
-    border-bottom: solid 2px white;
+    text-shadow: 1px 1px 2px #000000;
 }
 
+.menuItem:not(:last-child){
+    border-bottom: solid 2px white;
+}
 .menuItem:hover {
     text-decoration-line: none;
-    color: rgba(29, 185, 74, 0.82);
-    font-weight: bold;
+    color: rgba(66, 66, 66, 0.82);
+  
 }
 
 .mainImg {
+    display:none;
     border-radius: 50%;
   }
 
 /*Welcome Page*/
-
-.intro{
-    height:100vh;
+.col{
+    padding:10px;
+    margin:0;
 }
+
 
 button {
     border-radius: 10px;
     height: 50px;
-    width: 150px;
-    background-color: #56a36c;
+    background-color: #a8a8a8
     border: 1px black solid;
     box-shadow: 1px 1px 5px grey;
-    color: white;
-    font-size: 26px;
+    color: rgb(0, 0, 0);
     font-family: sans-serif;
-    margin: 0 auto;
+    padding:0;
+    margin:0;
+    width:100%;
 }
 
 button:hover {
     background-color: rgba(83, 70, 70, 0.44);
 }
 
-.socialButton {
-    width: 300px;
-}
-
 h1 {
-    padding-top: 350px;
+    padding-top: 250px;
     color: rgba(255, 255, 255, 0.966);
-    font-size: 5em;
+    font-size: 3.5rem;
     text-shadow: 1px 1px 2px grey;
     font-family: sans-serif;
+  width:100%;
 }
-h1, h2{
+
+h2, h3, label{
+    font-size:2rem;
+}
+h1, h2, h3{
     text-align: center;
 }
 
-.eventHeader {
-    padding-top: 30px
-}
 
-h3 {
-    color: #2D507A;
-}
 
 p {
-    font-size: 26px;
     font-family:  sans-serif;
+    color:white;
+    font-size:1.5rem;
+    text-shadow: 1px 1px 2px black;
 }
 
-
-/*Input Edits*/
-
-input {
-    text-align: center;
-    height: 50px;
-    width: 300px;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+a{
+    color:black;
 }
 
-.inputs {
-    box-shadow: .5px .5px 3px;
+/* Contact */
+
+.form-control{
+    width:350px;
 }
 
-.dropdown {
-    background-color: white;
-    border-radius: 10px !important;
-    border-top-right-radius: 50px;
-    font-family:  sans-serif;
-    text-align: center;
-    height: 50px;
-    width: 300px;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-bottom: 7px;
-    box-shadow: .5px .5px 3px;
+label{
+    color:white;
 }
 
-.eventHeader {
-    color: #2D507A;
-    text-align: center;
-    font-size: 2em;
-    text-shadow: 1px 1px 2px grey;
-    font-family:  sans-serif;
-}
-
-.ifNeeded {
-    font-size: 1.3rem;
+.nonHomeHeader{
+    padding-top:120px;
 }
 
 /*Media Queries*/
@@ -146,12 +126,22 @@ input {
 
 @media screen and (min-width: 767px) {
 
-  
+    .intro{
+        height:100vh;
+    }
+
+    h1{
+        padding-top:400px;
+    }
     .navbar-expand-md {
         border-right: solid white 6px;
     }
 
 
+    .mainImg {
+        display:block;
+        border-radius: 50%;
+      }
     .nav-item {
         width: 280px;
         padding: 20px 0px 20px 0px;
@@ -169,6 +159,10 @@ input {
     .wrapper {
         position: relative;
         min-height: 100%;
+    }
+
+    .form-control{
+        width:420px;
     }
 
     .page-layout {
