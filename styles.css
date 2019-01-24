@@ -1,6 +1,6 @@
 html,
 body {
-    min-height: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
     position: relative;
@@ -14,9 +14,11 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-}
+    margin: 0 0 24px;
+   
+    }
 
-
+bbbbbbbbbbbb
 /*The Nav*/
 
 .navbar-toggler {
@@ -65,8 +67,9 @@ button {
     color: rgb(0, 0, 0);
     font-family: sans-serif;
     padding:0;
-    margin:0;
-    width:100%;
+    margin:0 auto;
+    width:300px;
+    
 }
 
 button:hover {
@@ -89,8 +92,6 @@ h1, h2, h3{
     text-align: center;
 }
 
-
-
 p {
     font-family:  sans-serif;
     color:white;
@@ -112,9 +113,13 @@ label{
     color:white;
 }
 
+footer{
+    display:none;
+}
 .nonHomeHeader{
     padding-top:120px;
 }
+
 
 /*Media Queries*/
 
@@ -135,27 +140,32 @@ label{
     }
     .navbar-expand-md {
         border-right: solid white 6px;
+        background-color:blue;
+        z-index: 1;
+        
     }
 
 
     .mainImg {
         display:block;
         border-radius: 50%;
+        margin-top:40px;
       }
     .nav-item {
         width: 280px;
         padding: 20px 0px 20px 0px;
         text-align: left;
         color: #fff;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .navbar {
         position: fixed;
         height: 100vh;
+        align-items: start;
     }
 
-    /*Footer*/
+  
     .wrapper {
         position: relative;
         min-height: 100%;
@@ -170,13 +180,19 @@ label{
         padding-bottom: 64px;
     }
 
-    footer {
-        position: absolute;
-        margin-left: 319px;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 24px;
-        background-color:  rgba(255, 255, 255, 0.99);
-        color: rgba(20, 17, 17, 0.99);
-    }
+  /* Footer */
+
+footer {
+    display:block;
+    position: absolute;
+    margin-left: 319px;
+    left: -319px;
+    padding-left:319px;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    background-color:  rgba(255, 255, 255, 0.99);
+    color: rgba(20, 17, 17, 0.99);
+    overflow:hidden;
+}
+}
